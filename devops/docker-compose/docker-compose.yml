@@ -12,6 +12,7 @@ services:
     api-logic-server:
         environment:
           #- APILOGICPROJECT_API_PREFIX=/sqlite-api
+          # configure-me
           - APILOGICPROJECT_CLIENT_URI=//10.0.0.77
           - SECURITY_ENABLED=false
           - PYTHONPATH=/app/ApiLogicProject 
@@ -23,6 +24,7 @@ services:
         expose:
             - 5000
         volumes:
+            # configure-me
             - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/docker_compose_tests/postgres-docker-compose:/app
             - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/docker_compose_tests/postgres-docker-compose:/mm
             # see APILOGICSERVER_HOME (09.01.19) - ./ApiLogicProject/ui/safrs-react-admin:/src/apilogicserver/api_logic_server_cli/create_from_model/safrs-react-admin-npm-build
