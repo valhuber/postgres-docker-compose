@@ -9,12 +9,13 @@
 version: "3.5"
 
 services:
-    api-logic-server_val:
+    api-logic-server:
         environment:
           #- APILOGICPROJECT_API_PREFIX=/sqlite-api
-          - APILOGICPROJECT_CLIENT_URI=//192.168.109.130
+          - APILOGICPROJECT_CLIENT_URI=//10.0.0.77
           - SECURITY_ENABLED=false
           - PYTHONPATH=/app/ApiLogicProject 
+          - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI=postgresql://postgres:p@nw_postgres/postgres
           # - APILOGICSERVER_HOME=/src/apilogicserver
         build:
             context: ../..
@@ -22,8 +23,8 @@ services:
         expose:
             - 5000
         volumes:
-            - /mnt/sdb/tmp/postgres-docker-compose:/app
-            - /mnt/sdb/tmp/postgres-docker-compose:/mm
+            - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/docker_compose_tests/postgres-docker-compose:/app
+            - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/docker_compose_tests/postgres-docker-compose:/mm
             # see APILOGICSERVER_HOME (09.01.19) - ./ApiLogicProject/ui/safrs-react-admin:/src/apilogicserver/api_logic_server_cli/create_from_model/safrs-react-admin-npm-build
         #command: /usr/local/bin/gunicorn --reload --workers 4 --worker-connections 4 --access-logfile=- --pythonpath /app/ApiLogicProject -b :5000 api_logic_server_run:flask_app 
         command:  bash /mm/start.sh #/app/ApiLogicProject/start.sh
