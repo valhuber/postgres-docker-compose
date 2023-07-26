@@ -20,6 +20,8 @@ To configure the ApiLogicProject, change the environement variables in [`devops/
             - APILOGICPROJECT_CLIENT_URI=//192.168.109.130
 ```
 
+See also entries: `configure-me`.
+
 ## Run
 
 Ensure you are not already running the API Logic Server postgres database in a docker container.  If it's running, you will see port conflicts.
