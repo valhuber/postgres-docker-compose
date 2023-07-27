@@ -71,3 +71,4 @@ Perhaps we take a middle approach:
 
 * create projects with a sparse `devops/docker-compose` - the compose file and the dockerfile, with a readme to say where to find the sample and further doc.
 
+I an inclined toward this, but very interested in your thoughts.
