@@ -24,7 +24,7 @@ See also entries: `configure-me`.
 
 ## Run
 
-Ensure you are not already running the API Logic Server postgres database in a docker container.  If it's running, you will see port conflicts.
+> Ensure you are not already running the API Logic Server postgres database in a docker container.  If it's running, you will see port conflicts.
 
 The following will build and deploy the default container stack locally:
 
@@ -32,3 +32,5 @@ The following will build and deploy the default container stack locally:
 # cd postgres-docker-compose  # <project-root>
 # docker-compose -f ./devops/docker-compose/docker-compose.yml up
 ```
+
+Then, in your browser, open `localhost`.
