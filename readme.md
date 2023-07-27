@@ -35,12 +35,12 @@ The following will build and deploy the default container stack locally:
 
 Then, in your browser, open `localhost`.
 
+
 ## Add Security (under construction - not working)
 
 First, update the project:
 
 ```bash
 cd postgres-docker-compose
-cd ..
-ApiLogicServer add-auth --project_name=postgres-docker-compose
-```
+ApiLogicServer add-auth --project_name=. 
+````
