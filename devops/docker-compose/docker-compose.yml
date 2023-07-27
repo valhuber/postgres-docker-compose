@@ -44,9 +44,8 @@ services:
             - ./etc/nginx.conf:/etc/nginx/conf.d/default.conf:ro
             - ./etc/ssl:/etc/ssl:ro
 
-
     nw_postgres:
-        image: apilogicserver/postgres:version2.0.0
+        image: apilogicserver/postgres:latest
         restart: always
         environment:
           - PGDATA=/pgdata
