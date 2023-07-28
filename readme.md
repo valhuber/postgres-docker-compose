@@ -1,4 +1,4 @@
-# Posetgres ApiLogicProject using Docker and docker-compose
+# Postgres ApiLogicProject using Docker and docker-compose
 
 ## Installation
 
